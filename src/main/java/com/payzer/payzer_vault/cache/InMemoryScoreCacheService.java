@@ -1,7 +1,11 @@
 package com.payzer.payzer_vault.cache;
 import org.springframework.stereotype.Service;
-import java.time.Instant;import java.util.Map;import java.util.Optional;import java.util.concurrent.ConcurrentHashMap;
-@Service public class InMemoryScoreCacheService implements ScoreCacheService {
+import java.time.Instant;
+import java.util.Map;
+import java.util.Optional;
+import java.util.concurrent.ConcurrentHashMap;
+@Service 
+public class InMemoryScoreCacheService implements ScoreCacheService {
 
     private static class Value {
         final int score;

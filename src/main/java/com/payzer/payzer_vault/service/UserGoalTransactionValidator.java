@@ -1,5 +1,6 @@
 package com.payzer.payzer_vault.service;
-import com.payzer.payzer_vault.repository.UserRepository;import org.springframework.stereotype.Component;
+import com.payzer.payzer_vault.repository.UserRepository;
+import org.springframework.stereotype.Component;
 @Component
 public class UserGoalTransactionValidator {
     private final UserRepository userRepository;
@@ -10,4 +11,3 @@ public class UserGoalTransactionValidator {
         return userRepository.existsById(userId);
     }
 }
-    

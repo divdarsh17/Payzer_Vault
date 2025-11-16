@@ -17,7 +17,7 @@ public class Transaction {
     private BigDecimal amount;
 
     @Column(length = 16, nullable = false)
-    private String type; // CREDIT or DEBIT
+    private String type;
 
     @Column(name = "occurred_at", nullable = false)
     private LocalDateTime occurredAt;

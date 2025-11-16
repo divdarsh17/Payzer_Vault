@@ -1,5 +1,8 @@
 package com.payzer.payzer_vault.service;
-import com.payzer.payzer_vault.dto.SavingsCommitmentRequest;import com.payzer.payzer_vault.dto.ScoreResponse;import org.springframework.stereotype.Service;import reactor.core.publisher.Mono;
+import com.payzer.payzer_vault.dto.SavingsCommitmentRequest;
+import com.payzer.payzer_vault.dto.ScoreResponse;
+import org.springframework.stereotype.Service;
+import reactor.core.publisher.Mono;
 import java.util.Map;
 @Service 
 public class PredictionOrchestratorService {
@@ -24,7 +27,7 @@ public class PredictionOrchestratorService {
                 .onErrorResume(ex -> {
                             fallbackService.neutralScore(),
                             "fallback",
-                            "fallback"                    );
+                            "fallback" );
                     return Mono.just(fallback);
                 });
     }
